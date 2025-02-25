@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DDGChatAPI"
+        xmlns:mdxam="clr-namespace:MdXaml;assembly=MdXaml"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" xmlns:hc="https://handyorg.github.io/handycontrol" x:Name="mainWindow" x:Class="DDGChatAPI.MainWindow"
+        mc:Ignorable="d"
+        Title="Duck.AI" ResizeMode="NoResize" Height="449" Width="800" Background="#FFB70C0C" Icon="/favicon.ico" Loaded="mainWindow_Loaded">
+    <Canvas x:Name="mainCanvas" Background="#FF252525" ClipToBounds="True" HorizontalAlignment="Center" VerticalAlignment="Center" Height="433" Width="800">
+        <Button x:Name="sendBTN" Content="Send" Background="#FF303030" Foreground="#FFC6C6C6" Canvas.Left="718" Canvas.Top="362" Height="54" Width="71" Click="Button_Click" IsEnabled="False" FontWeight="Bold" FontSize="16" BorderBrush="#FF404040" BorderThickness="2" VerticalAlignment="Top"/>
+        <TextBox x:Name="chatContentBox" KeyDown="chatBoxKeyDown" Background="#FF303030" Foreground="#c2c2c2" BorderBrush="#FF404040" BorderThickness="2" TextWrapping="Wrap" Width="701" Canvas.Left="12" Canvas.Top="362" HorizontalAlignment="Center" VerticalAlignment="Top" Height="54" FontSize="14" IsEnabled="False" SelectionBrush="#FFC2C2C2" SelectionTextBrush="#FF303030"/>
+
+
+        <mdxam:MarkdownScrollViewer Name="mdViewer" xml:space="preserve" Canvas.Left="15" Canvas.Top="10" Height="347" Width="774" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF303030" Foreground="#FFC6C6C6" SelectionBrush="#FFC2C2C2" />
+        <hc:LoadingCircle x:Name="loadingAnimation" HorizontalAlignment="Center" Canvas.Left="380" VerticalAlignment="Center" Canvas.Top="196" Foreground="#FFC6C6C6" Visibility="Hidden"/>
+
+    </Canvas>
+</Window>
