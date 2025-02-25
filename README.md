@@ -25,6 +25,12 @@ An unofficial API wrapper for duck.ai written in C# <br />
 
 ---
 
+# How it works
+
+The concept is really easy. First a request is sent to the `/status` endpoint. This request holds the `X-Vqd-Accept: 1` header, which tells DuckDuckGo to give us a token. The token will be returned in the requests response headers. From here on, you can send requests to the `/chat` endpoint and get the response as long as you include the token header in each request.
+
+---
+
 ## Why ?
 
 I had an internship for which i had to make some C# applications. This is what i came up with since i use duck.ai relatively frequently.
